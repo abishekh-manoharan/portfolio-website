@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Project 1",
+            "github link": "google.ca",
+            "tags": ["a","b"]
+        },
+        {
+            "id": 2,
+            "name": "Project 2",
+            "github link": "google.ca",
+            "tags": ["a"]
+        },
+        {
+            "id": 3,
+            "name": "Project 3",
+            "github link": "google.ca",
+            "tags": ["b"]
+        }
+    ]
+}
