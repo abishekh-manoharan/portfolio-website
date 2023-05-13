@@ -1,19 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import axios from 'axios';
+import projectsService from '../services/projectsService'
+import Project from './Project';
 
 function Projects(props) {
 
     const tags = ["a", "b"]
-
     const [projectsToShow, setProjectsToShow] = useState([])
     const [allProjects, setAllProjects] = useState([])
     
     useEffect(()=>{
-        axios.get('http://localhost:3001/projects')
+        projectsService.getAll()
             .then((res)=>{
-                setAllProjects(res.data)
-                setProjectsToShow(res.data)
+                setAllProjects(res)
+                setProjectsToShow(res)
             })
     }, [])
 
@@ -33,9 +33,7 @@ function Projects(props) {
 
     return (
         <div>
-            {projectsToShow.map((e)=>{
-                return <p key={e.id}>{e.name}</p>
-            })}
+            {projectsToShow.map((e) => <Project name={e.name} description={e.description} githubLink={e.githubLink} siteLink={e.siteLink} images={e.images} tags={e.tags}/>)}
 
             {tags.map((e)=> {
                 return <button onClick={handleFilter} key={e} value={e}>{e}</button>
