@@ -21,23 +21,29 @@ function Projects(props) {
     const handleFilter = (e) => {
         const filterValue = e.target.value;
         console.log('filter value: '+filterValue)
+        let updatedActiveTags = []
 
         if(!activeTags.includes(filterValue)){
-            console.log('doesnt include');
+            console.log('adding tag: ', filterValue);
 
-            const updatedActiveTags = activeTags.concat(filterValue)
-            console.log('updatedActiveTags: '+updatedActiveTags);
-            
-            const updatedProjectsToShow = allProjects.filter((project) => {return updatedActiveTags.every((tag)=>project.tags.includes(tag))})
-            console.log('updatedProjectsToShow: after filter',updatedProjectsToShow);
-            
-            setProjectsToShow(updatedProjectsToShow)
-            setActiveTags(updatedActiveTags)
+            updatedActiveTags = activeTags.concat(filterValue)
+            console.log('updatedActiveTags: ', updatedActiveTags);
         }
 
         else {
-            console.log('tag already is active');
+            console.log('Deactivating tag:' , filterValue);
+            updatedActiveTags = [...activeTags]
+            updatedActiveTags.splice(activeTags.indexOf(filterValue),1)
+            console.log('updated active tags: ',updatedActiveTags)
         }
+
+        const updatedProjectsToShow = allProjects.filter((project) => {return updatedActiveTags.every((tag)=>project.tags.includes(tag))})
+        console.log('updatedProjectsToShow: after filter',updatedProjectsToShow);
+        
+        const updatedActiveTagsConst = [...updatedActiveTags]
+
+        setProjectsToShow(updatedProjectsToShow)
+        setActiveTags(updatedActiveTagsConst)
     }
 
 
