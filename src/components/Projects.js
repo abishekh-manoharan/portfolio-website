@@ -4,8 +4,9 @@ import projectsService from '../services/projectsService'
 import Project from './Project';
 
 function Projects(props) {
-
-    const tags = ["a", "b"]
+    //const [filterTags, setFilterTags] = useState([{tag:"a", set: false},{tag:"b", set: false},{tag:"c", set: false}])
+    const [tags, setTags] = useState(['a', 'b', 'c'])
+    const [activeTags, setActiveTags] = useState([])
     const [projectsToShow, setProjectsToShow] = useState([])
     const [allProjects, setAllProjects] = useState([])
     
@@ -19,16 +20,30 @@ function Projects(props) {
 
     const handleFilter = (e) => {
         const filterValue = e.target.value;
+        console.log('filter value: '+filterValue)
 
-        const filtered = allProjects.filter((e)=>{
-            return e.tags.includes(filterValue)
-        })
+        if(!activeTags.includes(filterValue)){
+            console.log('doesnt include');
 
-        setProjectsToShow(filtered)
+            const updatedActiveTags = activeTags.concat(filterValue)
+            console.log('updatedActiveTags: '+updatedActiveTags);
+            
+            const updatedProjectsToShow = allProjects.filter((project) => {return updatedActiveTags.every((tag)=>project.tags.includes(tag))})
+            console.log('updatedProjectsToShow: after filter',updatedProjectsToShow);
+            
+            setProjectsToShow(updatedProjectsToShow)
+            setActiveTags(updatedActiveTags)
+        }
+
+        else {
+            console.log('tag already is active');
+        }
     }
+
 
     const handleCencelFilter = () => {
         setProjectsToShow(allProjects)
+        setActiveTags([])
     }
 
     return (
@@ -38,8 +53,10 @@ function Projects(props) {
             {tags.map((e)=> {
                 return <button onClick={handleFilter} key={e} value={e}>{e}</button>
             })}
-            {/* <button onClick={handleFilter}>filter</button> */}
+            // {/* <button onClick={handleFilter}>filter</button> */}
             <button onClick={handleCencelFilter}>Cancel filter</button>
+            <br/>
+            <p>active tags: {activeTags}</p>
         </div>
     );
 }
