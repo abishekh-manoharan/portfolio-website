@@ -54,7 +54,9 @@ function Projects(props) {
 
     return (
         <div>
-            {projectsToShow.map((e) => <Project name={e.name} description={e.description} githubLink={e.githubLink} siteLink={e.siteLink} images={e.images} tags={e.tags}/>)}
+            <div class="projects-container">
+                {projectsToShow.map((e) => <Project name={e.name} description={e.description} githubLink={e.githubLink} siteLink={e.siteLink} images={e.images} tags={e.tags}/>)}
+            </div>
 
             {tags.map((e)=> {
                 return <button onClick={handleFilter} key={e} value={e}>{e}</button>
