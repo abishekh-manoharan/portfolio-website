@@ -9,7 +9,7 @@ function Projects(props) {
     const [activeTags, setActiveTags] = useState([])
     const [projectsToShow, setProjectsToShow] = useState([])
     const [allProjects, setAllProjects] = useState([])
-    
+
     useEffect(()=>{
         projectsService.getAll()
             .then((res)=>{
@@ -36,7 +36,7 @@ function Projects(props) {
             updatedActiveTags.splice(activeTags.indexOf(filterValue),1)
             console.log('updated active tags: ',updatedActiveTags)
         }
-
+        // filter projectsToShow based on the condition that a project includes every active tag
         const updatedProjectsToShow = allProjects.filter((project) => {return updatedActiveTags.every((tag)=>project.tags.includes(tag))})
         console.log('updatedProjectsToShow: after filter',updatedProjectsToShow);
         
@@ -47,7 +47,7 @@ function Projects(props) {
     }
 
 
-    const handleCencelFilter = () => {
+    const handleCancelFilter = () => {
         setProjectsToShow(allProjects)
         setActiveTags([])
     }
@@ -60,7 +60,7 @@ function Projects(props) {
                 return <button onClick={handleFilter} key={e} value={e}>{e}</button>
             })}
             // {/* <button onClick={handleFilter}>filter</button> */}
-            <button onClick={handleCencelFilter}>Cancel filter</button>
+            <button onClick={handleCancelFilter}>Cancel filter</button>
             <br/>
             <p>active tags: {activeTags}</p>
         </div>
