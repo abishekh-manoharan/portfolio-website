@@ -2,12 +2,13 @@ import React from 'react';
 
 function ProjectsFilter({tags, handleFilter, handleCancelFilter}) {
     return (
-        <div>
+        <div class="filter-tags-buttons">
+            filter: 
             {tags.map((e)=> {
-                return <button onClick={handleFilter} key={e} value={e}>{e}</button>
+                return <button class="tagsButton" onClick={handleFilter} key={e} value={e}>{e}</button>
             })}
             // {/* <button onClick={handleFilter}>filter</button> */}
-            <button onClick={handleCancelFilter}>Cancel filter</button>
+            <button id="cancelFilterButton" onClick={handleCancelFilter}>Cancel filter</button>
         </div>
     );
 }
