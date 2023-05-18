@@ -1,4 +1,9 @@
-#navbar {
+.layout {
+    display:flex;
+    flex-direction: column;
+}
+
+.navbar {
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
@@ -26,18 +31,13 @@ body {
 .projects-container {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
     align-items: center;
     gap: 10px;
 }
 
 .project {
-    /* height: 160px; */
     border-radius: 7px;
-    background-color: steelblue;
-    /* margin: 20px 20px 20px 20px; */
-    /* min-width: 0; */
+    /* background-color: steelblue; */
 }
 
 .project-container {
@@ -90,5 +90,17 @@ body {
 
 .tags {
     grid-area: tag;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
+.tag {
+    border: 1px slategray solid;
+    border-radius: 30%;
+    background: #e0e0e0;
+    padding: 0px 5px 0px 5px;
+    /* background: #333; */
+}
