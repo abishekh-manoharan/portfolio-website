@@ -1,5 +1,5 @@
 import React from 'react';
-import Projects from './Projects';
+import ProjectsPage from './ProjectsPage';
 
 function Layout(props) {
     return (
@@ -11,7 +11,7 @@ function Layout(props) {
             </div>
 
             <div class="content">
-                <Projects/>
+                <ProjectsPage/>
             </div>
 
             <div class="footer">

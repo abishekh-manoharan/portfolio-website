@@ -1,11 +1,10 @@
 import Layout from './components/Layout';
-import Projects from './components/Projects';
+import ProjectsPage from './components/ProjectsPage';
 
 function App() {
   return (
     <div className="App">
       <Layout />
-      {/* <Projects /> */}
     </div>
   );
 }
