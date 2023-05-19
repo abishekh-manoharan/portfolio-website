@@ -39,8 +39,12 @@ body {
 .project {
     border-radius: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 318px;
+    flex-basis: 318px;
     /* background-color: steelblue; */
+}
+
+.project-subheading {
+    font-size: small;
 }
 
 .project-container {
@@ -53,14 +57,14 @@ body {
         'tag tag tag'
     ;
     grid-template-columns: 270fr 330fr 330fr;
-    grid-template-rows: 20fr 50fr 15fr 15fr;
+    grid-template-rows: 50px 1fr 60px 50px;
 }
 
 
 .image {
     grid-area: image;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -158,7 +162,7 @@ body {
     flex-direction: row;
     gap: 7.5px;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     padding-right: 10px;
 }
 
