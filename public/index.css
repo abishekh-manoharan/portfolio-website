@@ -76,6 +76,12 @@ body {
     align-items: center;
 }
 
+.content {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .description {
     grid-area: description;
     margin: 10px;
@@ -89,6 +95,48 @@ body {
 .github {
     grid-area: github;
     margin: 10px;    
+}
+
+.filterAndSort {
+    display: grid;
+    grid-template-areas: 
+        'filter-head sort'
+        'filter sort'
+    ;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.filter-header {
+    grid-area: filter-head;
+    font-size: large;
+    margin: 2px 5px;
+    align-self:center;
+}
+
+.filter-tags-buttons {
+    grid-area: filter;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    column-gap: 7px;
+    margin: 0px 5px 10px ;
+}
+
+.sort {
+    grid-area: sort;
+    text-align: end;
+    margin: 15px 10px 10px;
+}
+
+.tagsButton {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px 5px;
+    line-height: 1.5;
+    border-radius: 7px;
+    font-size: 16px;
+    border: 1px slategray solid;
+    background: #e0e0e0;
 }
 
 .tags {
@@ -109,27 +157,10 @@ body {
     /* background: #333; */
 }
 
-.filter-tags-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 7px;
-    width: 980px;
-    margin: 0px auto 10px ;
-}
 
-.tagsButton {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0px 5px;
-    line-height: 1.5;
-    border-radius: 7px;
-    font-size: 16px;
-    border: 1px slategray solid;
-    background: #e0e0e0;
-}
 
 #cancelFilterButton {
-    margin-left: auto;
+    /* margin-left: auto; */
     font-family: 'Open Sans', sans-serif;
     padding: 0px 5px;
     line-height: 1.5;
@@ -138,3 +169,4 @@ body {
     border: 1px rgb(125, 137, 149) solid;
     background: #ffd7d7;
 }
+

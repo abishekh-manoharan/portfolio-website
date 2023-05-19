@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import projectsService from '../services/projectsService'
 import Projects from './Projects';
 import ProjectsFilter from './ProjectsFilter';
+import ProjectsFilterAndSort from './ProjectsFilterAndSort';
 import Project from './Project';
 
 function ProjectsPage(props) {
@@ -27,6 +28,9 @@ function ProjectsPage(props) {
 
         if(!activeTags.includes(filterValue)){
             console.log('adding tag: ', filterValue);
+            
+            // updating style to indicate that the tag is active
+            e.target.style="opacity:50%"
 
             updatedActiveTags = activeTags.concat(filterValue)
             console.log('updatedActiveTags: ', updatedActiveTags);
@@ -34,6 +38,9 @@ function ProjectsPage(props) {
 
         else {
             console.log('Deactivating tag:' , filterValue);
+
+            // updating style to indicate that the tag is no longer active
+            e.target.style="opacity:100%"
             updatedActiveTags = [...activeTags]
             updatedActiveTags.splice(activeTags.indexOf(filterValue),1)
             console.log('updated active tags: ',updatedActiveTags)
@@ -57,7 +64,7 @@ function ProjectsPage(props) {
     return (
         <div>
             <p>active tags: {activeTags}</p>
-            <ProjectsFilter tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
+            <ProjectsFilterAndSort tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
             <Projects projectsToShow={projectsToShow}/>
         </div>
     );
