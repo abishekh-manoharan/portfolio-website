@@ -57,13 +57,16 @@ function ProjectsPage(props) {
 
 
     const handleCancelFilter = () => {
+        const tagButtons = document.getElementsByClassName('tagsButton')
+        for (let tag of tagButtons) {
+            tag.style = "opacity=100%"
+        }      
         setProjectsToShow(allProjects)
         setActiveTags([])
     }
 
     return (
         <div>
-            <p>active tags: {activeTags}</p>
             <ProjectsFilterAndSort tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
             <Projects projectsToShow={projectsToShow}/>
         </div>

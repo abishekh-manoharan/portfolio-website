@@ -100,11 +100,21 @@ body {
 .filterAndSort {
     display: grid;
     grid-template-areas: 
+        'filter-head'
+        'filter'
+        ;
+    /* grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    
+    /* TODO when doing sort capability */
+    /* grid-template-areas: 
         'filter-head sort'
         'filter sort'
-    ;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    ; */
+    /* grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    justify-content: end;
+    max-width: 980px;
 }
 
 .filter-header {
@@ -112,22 +122,24 @@ body {
     font-size: large;
     margin: 2px 5px;
     align-self:center;
+    text-align: end;
 }
 
 .filter-tags-buttons {
     grid-area: filter;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: flex-start;
-    column-gap: 7px;
+    gap: 7px;
     margin: 0px 5px 10px ;
 }
 
-.sort {
+/* .sort {
     grid-area: sort;
     text-align: end;
     margin: 15px 10px 10px;
-}
+} */
 
 .tagsButton {
     font-family: 'Open Sans', sans-serif;
@@ -137,6 +149,7 @@ body {
     font-size: 16px;
     border: 1px slategray solid;
     background: #e0e0e0;
+    flex-grow: 0;
 }
 
 .tags {
@@ -161,6 +174,7 @@ body {
 
 #cancelFilterButton {
     /* margin-left: auto; */
+    flex-grow: 0;
     font-family: 'Open Sans', sans-serif;
     padding: 0px 5px;
     line-height: 1.5;

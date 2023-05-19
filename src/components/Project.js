@@ -12,7 +12,7 @@ function Project(props) {
                     <div class="url">{props.siteLink}</div>
                     <div class="github">{props.githubLink}</div>
                     <div class="tags">
-                        {props.tags.map((tag)=><TagDisplay tagName={tag}/>)}
+                        {props.tags.map((tag)=><TagDisplay key={props.tags.indexOf(tag)} tagName={tag}/>)}
                     </div>
                 </div>
             </div>

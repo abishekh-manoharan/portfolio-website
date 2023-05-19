@@ -6,10 +6,10 @@ function ProjectsFilterAndSort({ tags, handleFilter, handleCancelFilter }) {
         <div class="filterAndSort">
             <div class="filter-header">Filter by tags:</div>
             <ProjectsFilter tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
-            {/* TODO */}
-            <div class="sort">
+            {/* TODO when doing sort functionality */}
+            {/* <div class="sort">
                 SORT BYs
-            </div>
+            </div> */}
         </div>        
     );
 }
