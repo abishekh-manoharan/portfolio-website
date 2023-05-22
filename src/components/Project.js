@@ -28,7 +28,7 @@ function Project(props) {
                         {props.githubLink}
                     </div>
                     <div class="tags">
-                        {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
+                        <span class="project-subheading" style={{marginLeft: 20 + 'px'}}>Tags:</span> {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
                     </div>
                 </div>
             </div>

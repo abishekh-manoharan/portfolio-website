@@ -45,6 +45,7 @@ body {
 
 .project-subheading {
     font-size: small;
+    color: slategray;
 }
 
 .project-container {
@@ -76,8 +77,9 @@ body {
 .header {
     grid-area: header;
     display: flex;
-    margin: 10px;
+    margin: 30px 10px 10px;
     align-items: center;
+    font-size: larger;
 }
 
 .content {
@@ -161,16 +163,17 @@ body {
     display: flex;
     flex-direction: row;
     gap: 7.5px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     padding-right: 10px;
 }
 
 .tag {
-    border: 1px slategray solid;
+    
     border-radius: 7px;
-    background: #e0e0e0;
+    background: #e0e0e0; 
     padding: 0px 5px;
+    
     /* background: #333; */
 }
 
@@ -184,7 +187,7 @@ body {
     line-height: 1.5;
     border-radius: 7px;
     font-size: 16px;
-    border: 1px rgb(125, 137, 149) solid;
-    background: #ffd7d7;
+    border: 1px rgb(219, 219, 219) solid;
+    background: rgb(255, 244, 244);
 }
 
