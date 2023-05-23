@@ -106,7 +106,7 @@ body {
 .filterAndSort {
     display: grid;
     grid-template-areas: 
-        'filter-head'
+        'filter-logo filter-head'
         'filter'
         ;
     /* grid-template-columns: 4fr 1fr;
@@ -131,9 +131,19 @@ body {
     text-align: end;
 }
 
-.filterAndSort:hover .filter-tags-buttons {
+.dropdownLogo {
+    grid-area: filter-logo;
+    align-self: center;
+    width: 20px;
+    margin-right: 45px;
+    margin-top: 2px;
+    height: 25px;
+}
+
+.filter-header:hover .filter-tags-buttons {
     display:flex;
     flex-wrap: wrap;
+    /* margin-top: 30px; */
     width: 200px;
     justify-content: flex-end;
     gap: 7px;
