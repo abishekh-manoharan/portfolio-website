@@ -1,17 +1,38 @@
 import React from 'react';
-import ProjectsPage from './ProjectsPage';
+import { useState } from 'react'
+import ProjectsPage from './ProjectsPage'
+import HomePage from './HomePage'
+import ContactPage from './ContactPage';
 
 function Layout(props) {
+    const [content, setContent] = useState('home')
+    let contentToShow = <HomePage/>
+
+    const navBarItemClickHandler = (e) => {
+        setContent(e)
+    }
+
+    if(content==='home'){
+        contentToShow = <HomePage/>
+    }
+    else if (content==='projects'){
+        contentToShow=<ProjectsPage/>
+    }
+    else {
+        contentToShow=<ContactPage/>
+    }
+
     return (
         <div class="layout">
             <div class="navbar">
-                <div class="navbarItem1">b</div>
-                <div class="navbarItem2">b</div>
-                <div class="navbarItem3">a</div>
+                <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button>
+                <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Home</button>
+                <button class="navbarItem" onClick={()=>navBarItemClickHandler('projects')}>Projects</button>
+                <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button>
             </div>
 
             <div class="content">
-                <ProjectsPage/>
+                {contentToShow}
             </div>
 
             <div class="footer">
