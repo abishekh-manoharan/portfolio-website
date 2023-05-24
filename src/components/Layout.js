@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react'
-import ProjectsPage from './ProjectsPage'
 import HomePage from './HomePage'
+import ProjectsPage from './ProjectsPage'
 import ContactPage from './ContactPage';
+import Footer from './Footer';
 
 function Layout(props) {
     const [content, setContent] = useState('home')
@@ -28,7 +29,7 @@ function Layout(props) {
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button>
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Home</button>
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('projects')}>Projects</button>
-                <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button>
+                {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button> */}
             </div>
 
             <div class="content">
@@ -36,7 +37,7 @@ function Layout(props) {
             </div>
 
             <div class="footer">
-
+                {/* <Footer/> */}
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 .layout {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .navbarItem {
-    margin: 0px 5px 5px; 
+    margin: 0px 5px 5px;
     font-family: 'Open Sans', sans-serif;
     border-radius: 5px;
     border: none;
@@ -48,6 +48,9 @@ body {
 
 .projects-container {
     display: flex;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -77,6 +80,8 @@ body {
     ;
     grid-template-columns: 270fr 330fr 330fr;
     grid-template-rows: 50px 1fr 60px 50px;
+
+    margin-bottom: 20px;
 }
 
 
@@ -101,9 +106,9 @@ body {
 }
 
 .content {
-    width: 980px;
+    /* width: 980px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 
 .description {
@@ -113,39 +118,34 @@ body {
 
 .url {
     grid-area: url;
-    margin: 10px;    
+    margin: 10px;
 }
 
 .github {
     grid-area: github;
-    margin: 10px;    
+    margin: 10px;
 }
 
 .filterAndSort {
+
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         'filter-logo filter-head'
         'filter'
-        ;
-    /* grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr; */
-    
-    /* TODO when doing sort capability */
-    /* grid-template-areas: 
-        'filter-head sort'
-        'filter sort'
-    ; */
-    /* grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr; */
+    ;
     justify-content: end;
-    max-width: 980px;
+    /* max-width: 980px; */
 }
 
 .filter-header {
     grid-area: filter-head;
     font-size: large;
     margin: 2px 5px;
-    align-self:center;
+    align-self: center;
     text-align: end;
 }
 
@@ -159,7 +159,7 @@ body {
 }
 
 .filter-header:hover .filter-tags-buttons {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     /* margin-top: 30px; */
     width: 200px;
@@ -174,7 +174,7 @@ body {
 
 .filterAndSort {
     position: sticky;
-    top:0px;
+    top: 0px;
     background-color: #ffffffda;
     margin-bottom: 6px;
 }
@@ -182,15 +182,7 @@ body {
 .filter-tags-buttons {
     grid-area: filter;
     display: none;
-    /* flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 7px;
-    margin: 0px 5px 10px ; */
-
     position: absolute;
-    /* left: 5px; */
-    /* top: 5px; */
     right: 5px;
 }
 
@@ -202,11 +194,11 @@ body {
 
 .tagsButton {
     font-family: 'Open Sans', sans-serif;
-    padding: 0px 5px;
+    padding: 2px 5px;
     line-height: 1.5;
     border-radius: 7px;
     font-size: 16px;
-    border: 1px slategray solid;
+    border: none;
     background: #eeeeee;
     flex-grow: 0;
 }
@@ -222,15 +214,13 @@ body {
 }
 
 .tag {
-    
+
     border-radius: 7px;
-    background: #e0e0e0; 
+    background: #e0e0e0;
     padding: 0px 5px;
-    
+
     /* background: #333; */
 }
-
-
 
 #cancelFilterButton {
     /* margin-left: auto; */
@@ -242,5 +232,53 @@ body {
     font-size: 16px;
     border: 1px rgb(219, 219, 219) solid;
     background: rgb(255, 244, 244);
+}
+
+.homePage {
+    width: 980px;
+    margin: auto;
+}
+
+
+
+.profile-container {
+    position: relative;
+    padding-top: 20px;
+}
+
+.profile-background {
+    position:relative;
+    height: 400px;
+    margin-top: 50px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 15px;
+    box-shadow: 10px 10px 50px rgb(209, 209, 209);
+    z-index: 1;
+}
+
+.profilePic {
+    position:absolute;
+    /* top: 40px; */
+    left:85px; 
+    width: 400px;
+    border-radius: 100%;
+    z-index: 2;
+    box-shadow: 14px 14px 50px rgb(162, 162, 162);
+}
+
+.profile-info {
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    width: 400px;
+    height: 400px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: 14px 14px 50px rgb(226, 226, 226);
+}
+
+.footer {
+    background-color: #f1f1f1;
 }
 

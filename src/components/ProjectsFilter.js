@@ -6,7 +6,7 @@ function ProjectsFilter({ tags, handleFilter, handleCancelFilter }) {
             {tags.map((e) => {
                 return <button class="tagsButton" onClick={handleFilter} key={e} value={e}>{e}</button>
             })}
-            <button id="cancelFilterButton" onClick={handleCancelFilter}>Cancel filter</button>
+            <button id="cancelFilterButton" onClick={handleCancelFilter}>Clear Filters</button>
         </div>
     );
 }
