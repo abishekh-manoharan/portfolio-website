@@ -250,7 +250,7 @@ body {
     position:relative;
     height: 400px;
     margin-top: 50px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 249, 231);
     border-radius: 15px;
     box-shadow: 10px 10px 50px rgb(209, 209, 209);
     z-index: 1;
@@ -260,25 +260,57 @@ body {
     position:absolute;
     /* top: 40px; */
     left:85px; 
-    width: 400px;
+    width: 370px;
     border-radius: 100%;
     z-index: 2;
-    box-shadow: 14px 14px 50px rgb(162, 162, 162);
+    box-shadow: 14px 14px 50px rgb(188, 175, 141);
 }
 
 .profile-info {
     z-index: 2;
     position: absolute;
     top: 30px;
-    right: 35px;
+    right: 75px;
     width: 400px;
     height: 400px;
-    background-color: #f6f6f6;
+    background-color: #f6f6f6ba;
     border-radius: 20px;
-    box-shadow: 14px 14px 50px rgb(226, 226, 226);
+    box-shadow: 14px 14px 50px rgb(188, 175, 141);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info {
+    margin-top: 0px;
+    font-size: 15px;
+    padding: 0px 20px;
+}
+
+.intro-text {
+    font-size: large;
+    color: #196d93;
 }
 
 .footer {
-    background-color: #f1f1f1;
+    background-color: #acacac;
 }
 
+a { 
+    color: #8b8b8b;
+}
+
+.home-site-nav {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.home-site-nav-component {
+    width: 350px;
+}
