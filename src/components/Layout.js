@@ -14,7 +14,7 @@ function Layout(props) {
     }
 
     if(content==='home'){
-        contentToShow = <HomePage/>
+        contentToShow = <HomePage setContent={setContent}/>
     }
     else if (content==='projects'){
         contentToShow=<ProjectsPage/>
@@ -26,7 +26,7 @@ function Layout(props) {
     return (
         <div class="layout">
             <div class="navbar">
-                <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button>
+                {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button> */}
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Home</button>
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('projects')}>Projects</button>
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button> */}
