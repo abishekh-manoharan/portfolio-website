@@ -7,6 +7,10 @@ function Project(props) {
         document.getElementById("project-images-"+props.name).style="display:flex;"
     }
 
+    const closeProjectImagesHandler = () => {
+        document.getElementById("project-images-"+props.name).style="display:none;"
+    }
+
     return (
         <div>
             <div class="project">
@@ -41,6 +45,8 @@ function Project(props) {
                     </div>
 
                     <div id={"project-images-"+props.name} class="project-images">
+                        <button class="closeGalleryButton" onClick={closeProjectImagesHandler}>X</button>
+                        
                         {
                             props.images.map((e)=><img class="project-image-secondary"src={e}/>)
                         }
