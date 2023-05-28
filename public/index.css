@@ -75,13 +75,38 @@ body {
     grid-template-areas:
         'image header header'
         'image description description'
-        'image url github'
+        'image github url'
         'tag tag tag'
     ;
-    grid-template-columns: 270fr 330fr 330fr; 
+    grid-template-columns: 270fr 330fr 330fr;
     grid-template-rows: 50px 1fr 60px 50px;
 
     margin-bottom: 20px;
+}
+
+.project-images {
+    display: none;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 10px;
+    bottom: 10px; 
+
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: scroll;
+    /* height: 100vh; */
+    width: 1000px;
+
+    padding: 20px;
+
+
+    /* height: 200px;
+    width: 200px; */
 }
 
 
@@ -95,6 +120,11 @@ body {
 .project-image {
     border-radius: 7px;
     margin: 15px;
+}
+
+.project-image-secondary {
+    height:500px;
+    width: 500px;
 }
 
 .header {
@@ -248,11 +278,11 @@ body {
 
 .profile-container {
     position: relative;
-    padding-top: 20px;  
+    padding-top: 20px;
 }
 
 .profile-background {
-    position:relative;
+    position: relative;
     width: 980px;
     height: 435px;
     margin-top: 50px;
@@ -263,9 +293,9 @@ body {
 }
 
 .profilePic {
-    position:absolute;
+    position: absolute;
     /* top: 40px; */
-    left:50px; 
+    left: 50px;
     width: 450px;
     /* border-radius: 100%; */
     z-index: 2;
@@ -306,7 +336,7 @@ body {
     background-color: #acacac;
 }
 
-a { 
+a {
     color: #8b8b8b;
 }
 
@@ -334,12 +364,12 @@ a {
     background-color: #ffe5e53d;
     box-shadow: 1px 1px 10px rgba(189, 166, 166, 0.817);
     margin: 20px 20px;
-    padding:10px;
+    padding: 10px;
 }
 
 .home-site-nav-component:hover {
     box-shadow: 1px 1px 20px rgba(81, 80, 80, 0.817);
-    padding:11px;
+    padding: 11px;
 }
 
 .home-site-nav-img {
@@ -348,20 +378,27 @@ a {
 
 #contact-container {
     display: none;
-    width:940px;
+    width: 940px;
     height: 400px;
     position: absolute;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     margin: auto;
     left: 0;
     right: 0;
-    top:0;
-    bottom:0;
-    
+    top: 0;
+    bottom: 0;
+
     background-color: #f6f6f6f6;
     border-radius: 20px;
     box-shadow: 1px 1px 50px rgba(81, 80, 80, 0.817);
 
-    z-index:3;
+    z-index: 3;
+}
+
+.resumePage {
+    width: 980px;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20px;
 }

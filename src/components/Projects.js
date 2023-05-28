@@ -4,7 +4,7 @@ import Project from './Project';
 function Projects({projectsToShow}) {
     return (
         <div class="projects-container">
-            {projectsToShow.map((e) => <Project key={e.id} name={e.name} description={e.description} githubLink={e.githubLink} siteLink={e.siteLink} images={e.images} tags={e.tags} />)}
+            {projectsToShow.map((e) => <Project key={e.id} name={e.name} deployed={e.deployed} description={e.description} githubLink={e.githubLink} siteLink={e.siteLink} images={e.images} tags={e.tags} />)}
         </div>
     );
 }
