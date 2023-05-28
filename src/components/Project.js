@@ -4,11 +4,17 @@ import TagDisplay from './TagDisplay';
 function Project(props) {
 
     const imageClickHandler = (e) => {
+        //making gallery visibile
         document.getElementById("project-images-"+props.name).style="display:flex;"
+        //preventing scroll external to gallery
+        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: hidden;"
     }
 
     const closeProjectImagesHandler = () => {
+        //making gallery invisible
         document.getElementById("project-images-"+props.name).style="display:none;"
+        //re-allowing scroll external to gallery
+        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: scroll;"
     }
 
     return (
