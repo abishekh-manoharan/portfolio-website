@@ -9,6 +9,7 @@ function Project(props) {
         document.getElementById("project-images-"+props.name).style="display:flex;"
         //preventing scroll external to gallery
         document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: hidden; background-color: rgb(0, 0, 0, 0.1);"
+        document.getElementsByClassName("navbar")[0].style="background-color: rgb(0, 0, 0, 0);"
     }
 
     const closeProjectImagesHandler = () => {
@@ -16,6 +17,7 @@ function Project(props) {
         document.getElementById("project-images-"+props.name).style="display:none;"
         //re-allowing scroll external to gallery
         document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: scroll; background-color: white;"
+        document.getElementsByClassName("navbar")[0].style="background-color: #ffffffb4;"
     }
 
     return (

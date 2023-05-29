@@ -4,10 +4,15 @@
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 5;
+    background: #ffffffb4;
+    margin-bottom: 20px;
 }
 
 /* .navbarItem:nth-of-type(2) {
@@ -19,10 +24,10 @@
     font-family: 'Open Sans', sans-serif;
     border-radius: 5px;
     border: none;
-    font-size: 18px;
     line-height: 1.5;
+    font-size: 19px;
     color: #333;
-    background: #fff;
+    background: #cbcbcb00;
     padding: 5px;
 }
 
@@ -105,7 +110,7 @@ body {
     padding: 20px;
     border-radius: 10px;
 
-    z-index: 4;
+    z-index: 5;
 }
 
 .project-image-secondary {
@@ -229,7 +234,7 @@ body {
 }
 
 .filterAndSort {
-    position: sticky;
+    position: relative;
     top: 0px;
     background-color: #ffffffda;
     margin-bottom: 6px;
@@ -297,13 +302,16 @@ body {
     height: 80vh;
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 
 
 .profile-container {
     position: relative;
+    top:20px;
     padding-top: 20px;
+    /* margin-top: 110px; */
 }
 
 .profile-typewriter-effect h1 {
@@ -314,9 +322,9 @@ body {
     width: 370px;
     font-size: 50px;
     overflow: hidden; 
-    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    border-right: .12em solid rgb(0, 0, 0);
+    white-space: nowrap; 
+    margin: 0 auto; 
     letter-spacing: .10em;
     animation: 
         typing 2s steps(10, end),
@@ -365,7 +373,8 @@ body {
     display: flex;
     margin-top: 100px;
     flex-direction: column;
-    gap: 20px;
+    gap: 45px;
+    justify-content: space-between;
 }
 
 .profile-info {
@@ -392,6 +401,8 @@ body {
     grid-template-rows: 1fr 1fr 2fr;
     grid-row: 1/4;
     align-items: center;
+
+    margin-bottom: 30px;
 }
 
 .profile-info-component:nth-of-type(5) {
