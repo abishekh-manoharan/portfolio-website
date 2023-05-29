@@ -1,5 +1,6 @@
 import React from 'react';
 import TagDisplay from './TagDisplay';
+import layersLogo from '../images/layers.svg';
 
 function Project(props) {
 
@@ -7,21 +8,25 @@ function Project(props) {
         //making gallery visibile
         document.getElementById("project-images-"+props.name).style="display:flex;"
         //preventing scroll external to gallery
-        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: hidden;"
+        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: hidden; background-color: rgb(0, 0, 0, 0.1);"
     }
 
     const closeProjectImagesHandler = () => {
         //making gallery invisible
         document.getElementById("project-images-"+props.name).style="display:none;"
         //re-allowing scroll external to gallery
-        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: scroll;"
+        document.getElementsByClassName("vsc-initialized")[0].style="overflow-y: scroll; background-color: white;"
     }
 
     return (
         <div>
             <div class="project">
                 <div class="project-container">
-                    <div class="image" onClick={()=>imageClickHandler(props.name)}><img class="project-image" src="https://placekitten.com/250/250" alt="" /></div>
+                    <div class="image">
+                        <img class="project-image" src="https://placekitten.com/250/250" alt="" />
+                        <img class="layers-logo" onClick={()=>imageClickHandler(props.name)} src={layersLogo}></img>
+                    </div>
+                    
                     <div class="header">{props.name}</div>
                     <div class="description">
                         <div class="project-subheading" style={{ marginBottom: 2 + 'px' }}>

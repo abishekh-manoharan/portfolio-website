@@ -89,8 +89,8 @@ body {
     display: none;
     background-color: whitesmoke;
     position: fixed;
-    top: 5px;
-    bottom: 10px; 
+    top: 1px;
+    bottom: 1px; 
 
     left: 0;
     right: 0;
@@ -104,6 +104,8 @@ body {
 
     padding: 20px;
     border-radius: 10px;
+
+    z-index: 4;
 }
 
 .project-image-secondary {
@@ -120,11 +122,27 @@ body {
     border: none;
     background-color: #e0e0e000;
 }
+
 .image {
+    position: relative;
     grid-area: image;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+}
+
+.layers-logo {
+    position: absolute;
+    background-color: #fcfcfc4b;
+    top: 25px;
+    left: 25px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.layers-logo:hover {
+    background-color: #fcfcfc97;
 }
 
 .project-image {
@@ -287,6 +305,37 @@ body {
     position: relative;
     padding-top: 20px;
 }
+
+.profile-typewriter-effect h1 {
+    position: absolute;
+    right: 50px;
+    top: 90px;
+    z-index: 3; 
+    width: 370px;
+    font-size: 50px;
+    overflow: hidden; 
+    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em;
+    animation: 
+        typing 2s steps(10, end),
+        blink-caret .5s step-end infinite;
+}
+
+.profile-typewriter-effect{
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    z-index: 3; 
+    width: 350px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 
 .profile-background {
     position: relative;

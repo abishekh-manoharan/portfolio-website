@@ -40,6 +40,9 @@ function HomePage({ setContent }) {
                     <div class="profile-container">
                         <img src={profilePic} class="profilePic" alt="portfolio profile pic" />
                         <div class="profile-background"></div>
+                            <div class="profile-typewriter-effect">
+                                <h1>Hello World!</h1>
+                            </div>
                     </div>
 
                     <div class="profile-info">
