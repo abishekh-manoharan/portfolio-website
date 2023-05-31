@@ -1,38 +1,41 @@
 {   
-    "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual Project", "Group Project", "AI", "Flask", "Demo"],
+    "tags": ["AI", "React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual Project", "Group Project", "Flask", "Demo", "Deployed", "Python"],
     "projects": [
         {
             "id": 1,
             "name": "Portfolio Website",
             "description": "This was a personal project I developed as a means for displaying my projects to my peers and potential employers. It allows the user to view basic information about me, view a list of my projects, filter projects by tags, and to view my resume. It uses React for the front-end, Express for the back-end, and MongoDB as the database.",
-            "deployed": true,
+            "deployed": false,
             "demo": false,
             "siteLink": "google.ca",
             "githubLink": "https://github.com/abishekh-manoharan/portfolio-website",
+            "demoLink": "https://youtube.com",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual", "Demo"]
+            "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual"]
         },
         {
             "id": 2,
             "name": "CheckMyPlant Website",
-            "description": "In this project, I worked within a team of 8 to develop a website that allowed end users to determine if a cauliflower is diseased using an AI model which we trained ourselves. Users can upload an image of a cauliflower and receive their results on a separate page. Jupyter Notebook and Python was used to create, train, and export the AI model. Flask was used for web-page routing and as an API to make predictions. For the front-end, Vanilla JS, HTML, and CSS was used.",
-            "deployed": true,
+            "description": "In this project, I worked within a team of 8 to develop a website that allowed end users to determine if a cauliflower is diseased using an AI model which we trained ourselves. Users can upload an image of a cauliflower and receive their results on a separate page. Jupyter Notebook and Python was used to create, train, and export the AI model. Flask was used for web-page routing and as an API to make predictions. For the front-end, vanilla JavaScript, HTML, and CSS was used.",
+            "deployed": false,
             "demo": true,
             "siteLink": "google.ca",
             "githubLink": "https://github.com/abi-manoharan97/CheckMyPlant",
+            "demoLink": "https://youtu.be/pz4aPWHdSLQ",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["AI","Flask", "Group Project", "JavaScript", "HTML", "CSS"]
+            "tags": ["AI", "Flask", "Group Project", "Python", "JavaScript", "HTML", "CSS", "Demo"]
         },
         {
             "id": 3,
-            "name": "Project 3",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "Student Grade Prediction Website",
+            "description": "In this project, me and two others created a website that allows users to predict the writing score of students based on parameters such as parental eduction level, lunch availability, and completion of a test prepatation course. We used python with Jupyter notebook to create, train, and export the model as well as to clean the data. Flask was used to create an API that returns a prediction based on specified parameters. React was used for the front-end. A more detailed explanation of the system architecture is available in the video demo linked below.",
             "deployed": true,
-            "demo": false,
-            "siteLink": "google.ca",
-            "githubLink": "google.ca",
+            "demo": true,
+            "siteLink": "https://aifinalprojectg4.onrender.com/",
+            "githubLink": "https://github.com/stars/abishekh-manoharan/lists/ai-gp",
+            "demoLink": "https://youtu.be/LMXY5_AL0tI",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["b"]
+            "tags": ["AI","Flask", "Group Project", "React", "Python", "JavaScript", "HTML", "CSS", "Demo", "Deployed"]
         }
     ]
 }

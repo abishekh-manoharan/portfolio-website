@@ -90,21 +90,6 @@ body {
     padding-bottom: 10px;
 }
 
-.project-container-no-demo {
-    width: 980px;
-    display: grid;
-    grid-template-areas:
-        'image header header'
-        'image description description'
-        'image github url'
-        'tag tag tag'
-    ;
-    grid-template-columns: 270fr 330fr 330fr;
-    grid-template-rows: 50px 1fr 60px 50px;
-
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
 
 .project-images {
     position:relative;
@@ -174,11 +159,11 @@ body {
 
 .header {
     grid-area: header;
-    color: #3f2424;
+    color: #1b1b1b;
     display: flex;
     margin: 30px 10px;
     align-items: center;
-    font-size: larger;
+    font-size:x-large;
 }
 
 .description {

@@ -37,22 +37,21 @@ function Project(props) {
                         {props.description}
                     </div>
                     <div class="links">
-
-                        {props.demo ?
-                            <div class="link">
-                                <div class="project-subheading">
-                                    Demo
-                                </div>
-                                <a href={props.githubLink} target='_'>Link</a>
-                            </div> : null
-                        }
-
                         <div class="link">
                             <div class="project-subheading">
                                 Code
                             </div>
                             <a href={props.githubLink} target='_'>Link</a>
                         </div>
+
+                        {props.demo ?
+                            <div class="link">
+                                <div class="project-subheading">
+                                    Demo
+                                </div>
+                                <a href={props.demoLink} target='_'>Link</a>
+                            </div> : null
+                        }
 
                         {props.deployed ?
                             <div class="link">
@@ -66,6 +65,7 @@ function Project(props) {
                     </div>
 
                     <div class="tags">
+                        {/* <span class="project-subheading">Tags:</span> */}
                         {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
                     </div>
 
