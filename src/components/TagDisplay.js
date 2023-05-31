@@ -3,7 +3,7 @@ import React from 'react';
 function TagDisplay({tagName}) {
     return (
         <div class="tag">
-            {tagName}
+            <i>{tagName}</i>
         </div>
     );
 }

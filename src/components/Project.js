@@ -66,7 +66,7 @@ function Project(props) {
                     </div>
 
                     <div class="tags">
-                        <span class="project-subheading">Tags:</span> {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
+                        {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
                     </div>
 
                     <div id={"project-images-" + props.name} class="project-images">
@@ -81,135 +81,6 @@ function Project(props) {
         </div>
 
     );
-
-
-    // // styling if demo is available
-    // if (props.demo) {
-    //     return (
-    //         <div>
-    //             <div class="project">
-    //                 <div class="project-container" id={"project-container" + props.name}>
-    //                     <div class="image">
-    //                         <img class="project-image" src="https://placekitten.com/250/250" alt="" />
-    //                         <img class="layers-logo" onClick={() => imageClickHandler(props.name)} src={layersLogo}></img>
-    //                     </div>
-
-    //                     <div class="header">{props.name}</div>
-    //                     <div class="description">
-    //                         <div class="project-subheading" style={{ marginBottom: 2 + 'px' }}>
-    //                             Description
-    //                         </div>
-    //                         {props.description}
-    //                     </div>
-
-    //                     {props.demo ?
-    //                         <div class="demo">
-    //                             <div class="project-subheading">
-    //                                 Demo
-    //                             </div>
-    //                             <a href={props.githubLink} target='_'>Link</a>
-    //                         </div> : null
-    //                     }
-
-    //                     <div class="github">
-    //                         <div class="project-subheading">
-    //                             Code
-    //                         </div>
-    //                         <a href={props.githubLink} target='_'>Link</a>
-    //                     </div>
-
-    //                     {props.deployed ?
-    //                         <div class="url">
-    //                             <div class="project-subheading">
-    //                                 Site Link
-    //                             </div>
-    //                             <a href={props.siteLink} target='_'>Link</a>
-    //                         </div>
-    //                         : <></>
-    //                     }
-
-    //                     <div class="tags">
-    //                         <span class="project-subheading">Tags:</span> {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
-    //                     </div>
-
-    //                     <div id={"project-images-" + props.name} class="project-images">
-    //                         <button class="closeGalleryButton" onClick={closeProjectImagesHandler}>X</button>
-
-    //                         {
-    //                             props.images.map((e) => <img class="project-image-secondary" src={e} />)
-    //                         }
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-
-    //     );
-    // }
-
-
-    // // styling if demo isnt available
-    // else {
-    //     return (
-
-    //         <div>
-    //             <div class="project">
-    //                 <div class="project-container-no-demo" id={"project-container" + props.name}>
-    //                     <div class="image">
-    //                         <img class="project-image" src="https://placekitten.com/250/250" alt="" />
-    //                         <img class="layers-logo" onClick={() => imageClickHandler(props.name)} src={layersLogo}></img>
-    //                     </div>
-
-    //                     <div class="header">{props.name}</div>
-    //                     <div class="description">
-    //                         <div class="project-subheading" style={{ marginBottom: 2 + 'px' }}>
-    //                             Description
-    //                         </div>
-    //                         {props.description}
-    //                     </div>
-
-    //                     {props.demo ?
-    //                         <div class="demo">
-    //                             <div class="project-subheading">
-    //                                 Demo
-    //                             </div>
-    //                             <a href={props.githubLink} target='_'>Link</a>
-    //                         </div> : null
-    //                     }
-
-    //                     <div class="github">
-    //                         <div class="project-subheading">
-    //                             Code, demos (if applicable), etc.
-    //                         </div>
-    //                         <a href={props.githubLink} target='_'>Link</a>
-    //                     </div>
-
-    //                     {props.deployed ?
-    //                         <div class="url">
-    //                             <div class="project-subheading">
-    //                                 Site Link
-    //                             </div>
-    //                             <a href={props.siteLink} target='_'>Link</a>
-    //                         </div>
-    //                         : <></>
-    //                     }
-
-    //                     <div class="tags">
-    //                         <span class="project-subheading">Tags:</span> {props.tags.map((tag) => <TagDisplay key={props.tags.indexOf(tag)} tagName={tag} />)}
-    //                     </div>
-
-    //                     <div id={"project-images-" + props.name} class="project-images">
-    //                         <button class="closeGalleryButton" onClick={closeProjectImagesHandler}>X</button>
-
-    //                         {
-    //                             props.images.map((e) => <img class="project-image-secondary" src={e} />)
-    //                         }
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
-
 }
 
 export default Project;
