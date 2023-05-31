@@ -1,5 +1,5 @@
 {   
-    "tags": ["AI", "React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual Project", "Group Project", "Flask", "Demo", "Deployed", "Python"],
+    "tags": ["Website", "Mobile Application", "AI", "React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual Project", "Group Project", "Flask", "Demo", "Deployed", "Python"],
     "projects": [
         {
             "id": 1,
@@ -11,7 +11,7 @@
             "githubLink": "https://github.com/abishekh-manoharan/portfolio-website",
             "demoLink": "https://youtube.com",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual"]
+            "tags": ["React", "Express", "HTML", "JavaScript", "MongoDB", "NoSQL", "CSS", "Individual", "Website"]
         },
         {
             "id": 2,
@@ -23,7 +23,7 @@
             "githubLink": "https://github.com/abi-manoharan97/CheckMyPlant",
             "demoLink": "https://youtu.be/pz4aPWHdSLQ",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["AI", "Flask", "Group Project", "Python", "JavaScript", "HTML", "CSS", "Demo"]
+            "tags": ["AI", "Demo", "Flask", "Group Project", "HTML", "JavaScript", "Python", "CSS",  "Website"]
         },
         {
             "id": 3,
@@ -35,7 +35,7 @@
             "githubLink": "https://github.com/stars/abishekh-manoharan/lists/ai-gp",
             "demoLink": "https://youtu.be/LMXY5_AL0tI",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["AI","Flask", "Group Project", "React", "Python", "JavaScript", "HTML", "CSS", "Demo", "Deployed"]
+            "tags": ["AI", "Demo", "Flask", "Group Project", "HTML", "JavaScript", "React", "Python", "CSS", "Deployed", "Website"]
         }
     ]
 }
