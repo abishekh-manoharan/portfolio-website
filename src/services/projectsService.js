@@ -1,6 +1,8 @@
 import axios from 'axios'
-const URL = 'http://localhost:3001/projects'
+const projectURL = 'http://localhost:3001/projects'
+const tagsURL = 'http://localhost:3001/tags'
 
-const getAll = () => axios.get(URL).then(res=>res.data)
+const getAllProjects = () => axios.get(projectURL).then(res=>res.data)
+const getAllTags = () => axios.get(tagsURL).then(res=>res.data)
 
-export default {getAll}
+export default {getAllProjects, getAllTags}

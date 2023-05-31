@@ -78,6 +78,22 @@ body {
     width: 980px;
     display: grid;
     grid-template-areas:
+        'image header header header'
+        'image description description description'
+        'image link link link'
+        'tag tag tag tag'
+    ;
+    grid-template-columns: 270fr 330fr 330fr 330fr;
+    grid-template-rows: 50px 1fr 60px 60px;
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.project-container-no-demo {
+    width: 980px;
+    display: grid;
+    grid-template-areas:
         'image header header'
         'image description description'
         'image github url'
@@ -87,6 +103,7 @@ body {
     grid-template-rows: 50px 1fr 60px 50px;
 
     margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .project-images {
@@ -139,11 +156,11 @@ body {
 .layers-logo {
     position: absolute;
     background-color: #fcfcfc4b;
-    top: 25px;
-    left: 25px;
+    top: 215px;
+    left: 215px;
     height: 45px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .layers-logo:hover {
@@ -155,15 +172,19 @@ body {
     margin: 15px;
 }
 
-
-
 .header {
     grid-area: header;
     color: #3f2424;
     display: flex;
-    margin: 30px 10px 10px;
+    margin: 30px 10px;
     align-items: center;
     font-size: larger;
+}
+
+.description {
+    grid-area: description;
+    /* display: flex; */
+    margin: 10px 10px 20px;
 }
 
 .content {
@@ -172,19 +193,32 @@ body {
     margin-right: auto; */
 }
 
-.description {
-    grid-area: description;
-    margin: 10px;
+.links {
+    grid-area: link;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    margin: 0px 10px;
 }
+
+/* .demo {
+    grid-area: demo;
+    margin: 10px;
+} */
 
 .url {
     grid-area: url;
-    margin: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
+
 
 .github {
     grid-area: github;
-    margin: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .filterAndSort {
@@ -267,11 +301,13 @@ body {
 .tags {
     grid-area: tag;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 7.5px;
+    gap: 10px;
     justify-content: flex-start;
     align-items: center;
     padding-right: 10px;
+    margin-left: 20px;
 }
 
 .tag {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { useState, useEffect } from 'react'
 import projectsService from '../services/projectsService'
 import Projects from './Projects';
@@ -14,10 +14,16 @@ function ProjectsPage(props) {
     const [allProjects, setAllProjects] = useState([])
 
     useEffect(()=>{
-        projectsService.getAll()
+        projectsService.getAllProjects()
             .then((res)=>{
                 setAllProjects(res)
                 setProjectsToShow(res)
+            })
+
+        projectsService.getAllTags()
+            .then((res)=>{
+                console.log("Tags: "+res);
+                setTags(res)
             })
     }, [])
 

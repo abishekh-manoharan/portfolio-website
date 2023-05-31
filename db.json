@@ -1,30 +1,34 @@
-{
+{   
+    "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual Project", "Group Project", "AI", "Flask", "Demo"],
     "projects": [
         {
             "id": 1,
-            "name": "Project 1",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "deployed": false,
+            "name": "Portfolio Website",
+            "description": "This was a personal project I developed as a means for displaying my projects to my peers and potential employers. It allows the user to view basic information about me, view a list of my projects, filter projects by tags, and to view my resume. It uses React for the front-end, Express for the back-end, and MongoDB as the database.",
+            "deployed": true,
+            "demo": false,
             "siteLink": "google.ca",
-            "githubLink": "google.ca",
+            "githubLink": "https://github.com/abishekh-manoharan/portfolio-website",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["a","b"]
+            "tags": ["React", "Express", "MongoDB", "NoSQL", "CSS", "HTML", "JavaScript", "Individual", "Demo"]
         },
         {
             "id": 2,
-            "name": "Project 2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "name": "CheckMyPlant Website",
+            "description": "In this project, I worked within a team of 8 to develop a website that allowed end users to determine if a cauliflower is diseased using an AI model which we trained ourselves. Users can upload an image of a cauliflower and receive their results on a separate page. Jupyter Notebook and Python was used to create, train, and export the AI model. Flask was used for web-page routing and as an API to make predictions. For the front-end, Vanilla JS, HTML, and CSS was used.",
             "deployed": true,
+            "demo": true,
             "siteLink": "google.ca",
-            "githubLink": "google.ca",
+            "githubLink": "https://github.com/abi-manoharan97/CheckMyPlant",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
-            "tags": ["a"]
+            "tags": ["AI","Flask", "Group Project", "JavaScript", "HTML", "CSS"]
         },
         {
             "id": 3,
             "name": "Project 3",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "deployed": true,
+            "demo": false,
             "siteLink": "google.ca",
             "githubLink": "google.ca",
             "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
