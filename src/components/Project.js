@@ -1,10 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import TagDisplay from './TagDisplay';
 import layersLogo from '../images/layers.svg';
 
 function Project(props) {
+    const [show, setShow] = useState(false)
 
     const imageClickHandler = (e) => {
+        setShow(true)
         //making gallery visibile
         document.getElementById("project-images-" + props.name).style = "display:flex;"
         //preventing scroll external to gallery
@@ -73,7 +76,7 @@ function Project(props) {
                         <button class="closeGalleryButton" onClick={closeProjectImagesHandler}>X</button>
 
                         {
-                            props.images.map((e) => <img class="project-image-secondary" src={e} />)
+                            show ? props.images.map((e) => <img class="project-image-secondary" src={e} />) : <></>
                         }
                     </div>
                 </div>
