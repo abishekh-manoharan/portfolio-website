@@ -25,7 +25,7 @@ function Project(props) {
             <div class="project">
                 <div class="project-container" id={"project-container" + props.name}>
                     <div class="image">
-                        <img class="project-image" src="https://placekitten.com/250/250" alt="" />
+                        <img class="project-image" src={props.images[0]} alt="" />
                         <img class="layers-logo" onClick={() => imageClickHandler(props.name)} src={layersLogo}></img>
                     </div>
 
