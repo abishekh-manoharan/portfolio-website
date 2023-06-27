@@ -17,12 +17,15 @@ function Layout(props) {
     if(content==='home'){
         contentToShow = <HomePage setContent={setContent}/>
     }
-    else if (content==='projects'){
+    else {
         contentToShow=<ProjectsPage/>
     }
-    else {
-        contentToShow=<ResumePage/>
-    }
+    // else if (content==='projects'){
+    //     contentToShow=<ProjectsPage/>
+    // }
+    // else {
+    //     contentToShow=<ResumePage/>
+    // }
 
     return (
         <div class="layout">
@@ -30,7 +33,7 @@ function Layout(props) {
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button> */}
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Home</button>
                 <button class="navbarItem" onClick={()=>navBarItemClickHandler('projects')}>Projects</button>
-                <button class="navbarItem" onClick={()=>navBarItemClickHandler('resume')}>Resume</button>
+                {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('resume')}>Resume</button> */}
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button> */}
             </div>
 

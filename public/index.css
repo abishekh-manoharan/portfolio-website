@@ -318,6 +318,7 @@ body {
 
 .homePage {
     position: relative;
+    top: 50px;
     width: 980px;
     margin: auto;
     height: 80vh;

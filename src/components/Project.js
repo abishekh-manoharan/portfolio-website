@@ -76,7 +76,12 @@ function Project(props) {
                         <button class="closeGalleryButton" onClick={closeProjectImagesHandler}>X</button>
 
                         {
-                            show ? props.images.map((e) => <img class="project-image-secondary" src={e} />) : <></>
+                            show ? 
+                            props.images.map((e) => <>
+                                <img class="project-image-secondary" src={e} /> 
+                                <br/>
+                            </>)
+                            : <></>
                         }
                     </div>
                 </div>

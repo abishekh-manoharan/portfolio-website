@@ -90,8 +90,7 @@ function HomePage({ setContent }) {
                                 About Me
                             </div>
                             <div class="info">
-                                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, e aque ipsa quae ab illo inventore veritatis et quasi
-
+                                I am a hard working individual, who is eager to learn an expand my horizons. I find personal satisfaction in creating software that the end user loves, and in working with teams to meet that end.
                             </div>
                         </div>
                     </div>
