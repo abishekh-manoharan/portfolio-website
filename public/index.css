@@ -12,7 +12,7 @@
     align-items: center;
     z-index: 5;
     background: #ffffffb4;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 /* .navbarItem:nth-of-type(2) {
@@ -318,9 +318,10 @@ body {
 
 .homePage {
     position: relative;
-    top: 40px;
+    /* top: 40px; */
     width: 980px;
-    margin: auto;
+    margin: 40px auto 0px;
+    /* margin-top: 25px; */
     height: 80vh;
     display: flex;
     align-items: center;
