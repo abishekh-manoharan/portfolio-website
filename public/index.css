@@ -323,9 +323,9 @@ body {
     margin: 40px auto 0px;
     /* margin-top: 25px; */
     height: 80vh;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 40px; */
 }
 
 
@@ -394,7 +394,6 @@ body {
 
 .profile-layout {
     display: flex;
-    margin-top: 100px;
     flex-direction: column;
     gap: 45px;
     justify-content: space-between;
