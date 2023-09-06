@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
-import HomePage from './HomePage'
+import HomePage2 from './HomePage2'
 import ProjectsPage from './ProjectsPage'
 import ContactPage from './ContactPage';
 import ResumePage from './ResumePage';
@@ -8,14 +8,14 @@ import Footer from './Footer';
 
 function Layout(props) {
     const [content, setContent] = useState('home')
-    let contentToShow = <HomePage/>
+    let contentToShow = <HomePage2/>
 
     const navBarItemClickHandler = (e) => {
         setContent(e)
     }
 
     if(content==='home'){
-        contentToShow = <HomePage setContent={setContent}/>
+        contentToShow = <HomePage2 setContent={setContent}/>
     }
     else {
         contentToShow=<ProjectsPage/>

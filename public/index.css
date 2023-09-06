@@ -1,3 +1,8 @@
+* {
+    font-family: "Tahoma", sans-serif;
+  }
+  
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -315,19 +320,15 @@ body {
     border: 1px rgb(219, 219, 219) solid;
     background: rgb(255, 244, 244);
 }
-
+/* 
 .homePage {
     position: relative;
-    /* top: 40px; */
     width: 980px;
     margin: auto;
-    /* margin-top: 25px; */
     height: 80vh;
-    /* display: flex;
-    align-items: center;
-    gap: 40px; */
-}
 
+}
+ */
 
 
 .profile-container {
@@ -513,3 +514,76 @@ a {
     margin: auto;
     margin-top: 20px;
 }
+
+
+
+/* HOME PAGE 2 */
+
+.homePage {
+    display: grid;
+    grid-template-areas:
+      "greeting greeting profile"
+      "name name profile"
+      "occupation occupation profile"
+      "about about profile"
+      "button button profile";
+    grid-template-columns: 3fr 3fr 4fr;
+    /* grid-template-rows: 1fr 2fr 1fr 2fr 2fr; */
+    margin: 15vh 5vw;
+  }
+  
+  .greeting {
+    grid-area: greeting;
+    font-size: 2vw;
+    position: relative;
+    align-self: end;
+    letter-spacing: 1px;
+    top: 10px;
+  }
+  .name {
+    grid-area: name;
+    font-size: 4vw;
+    padding: 0px;
+    /* font-size: 10em; */
+    align-self: center;
+  }
+  .occupation {
+    grid-area: occupation;
+    font-size: 1.5vw;
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 2vw;
+  }
+  .about {
+    grid-area: about;
+    font-size: 1.4vw;
+    position: relative;
+    bottom: 10px;
+    line-height: 2vw;
+  }
+  
+  .button {
+    grid-area: button;
+    width: 10vw;
+    font-size: 1.4vw;
+  }
+  .button1 {
+    /* position: relative; */
+    /* justify-self: end; */
+    /* right: 10px; */
+  }
+  .button2 {
+    grid-area: button;
+    position: relative;
+    left: 12vw;
+  }
+  .profile {
+    grid-area: profile;
+    margin: auto;
+  }
+ 
+  #profile-pic {
+    height: 33vw;
+    width: 33vw;
+  }
+  
