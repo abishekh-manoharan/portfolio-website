@@ -23,6 +23,7 @@
     margin-left: auto;
 }
 
+
 .navbarItem {
     margin: 0px 10px;
     font-family: 'Open Sans', sans-serif;
@@ -636,8 +637,19 @@ a {
 
 .button {
     background-color: transparent;
-    border: solid;
+    border: solid 1px;
     border-radius: 0px;
+    height: 33.74px;
     /* color: black;
     border-color: rgba(0, 0, 0, 0.544); */
+}
+
+.darkModeLogo {
+    height: 30.74px;
+    background-color: transparent;
+}
+
+.navbarItem:nth-of-type(3) {
+    border: none;
+    box-shadow: none;
 }

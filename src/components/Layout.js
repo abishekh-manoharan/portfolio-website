@@ -7,6 +7,8 @@ import ResumePage from './ResumePage';
 import Footer from './Footer';
 import lightbg from '../images/bg-light.jpeg'
 import darkbg from '../images/bg-dark.jpeg'
+import lightLogo from '../images/darkmode-light.svg'
+import darkLogo from '../images/darkmode-dark.svg'
 
 function Layout(props) {
     const [content, setContent] = useState('home')
@@ -62,7 +64,13 @@ function Layout(props) {
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button> */}
                 <button class="navbarItem button" onClick={() => navBarItemClickHandler('home')}>Home</button>
                 <button class="navbarItem button" onClick={() => navBarItemClickHandler('projects')}>Projects</button>
-                <button class="navbarItem button" onClick={darkModeHandler}>Dark Mode</button>
+                <button class="navbarItem button" id="darkModeLogo" onClick={darkModeHandler}>
+                    {darkMode ? 
+                    <img src={lightLogo} className="darkModeLogo"/>  
+                    : <img src={darkLogo} className="darkModeLogo"/>  
+                    }
+                </button>
+                {/* <img src={lightLogo} class="navbarItem button" onClick={darkModeHandler}/> */}
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('resume')}>Resume</button> */}
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button> */}
             </div>
