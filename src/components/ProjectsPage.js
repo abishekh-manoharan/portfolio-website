@@ -6,7 +6,8 @@ import ProjectsFilter from './ProjectsFilter';
 import ProjectsFilterAndSort from './ProjectsFilterAndSort';
 import Project from './Project';
 
-function ProjectsPage(props) {
+function ProjectsPage({setStylesForLight, setStylesForDark, darkMode}) {
+
     const [tags, setTags] = useState(["Website", "Mobile Application", "MVVM", "MVC", "AI", "React", "EJS", "Express", "Room", "MongoDB", "NoSQL", "SQL", "CSS", "HTML", "Java", "JavaScript", "Python", "Flask", "Individual Project", "Group Project", "Academic Project", "Personal Project", "Demo", "Deployed"])
     const [activeTags, setActiveTags] = useState([])
     const [projectsToShow, setProjectsToShow] = useState([])
@@ -135,8 +136,8 @@ function ProjectsPage(props) {
 
     return (
         <div>
-            <ProjectsFilterAndSort tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
-            <Projects projectsToShow={projectsToShow}/>
+            <ProjectsFilterAndSort darkMode={darkMode} tags={tags} handleFilter={handleFilter} handleCancelFilter={handleCancelFilter}/>
+            <Projects projectsToShow={projectsToShow} darkMode={darkMode}/>
         </div>
     );
 }

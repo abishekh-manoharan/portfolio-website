@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import pic from '../images/profile.png'
 
-function HomePage2(props) {
+function HomePage2({setStylesForLight, setStylesForDark, darkMode}) {
+    useEffect(()=>{
+        if (!darkMode) {
+            setStylesForLight()
+        }
+        else {
+            setStylesForDark()
+        }
+    },[darkMode])
     return (
         <div className="homePage">
           <div className="greeting">Hello! I am</div>
@@ -14,10 +22,11 @@ function HomePage2(props) {
             horizons. I find personal satisfaction in creating software that the end
             user loves, and in working with teams to meet that end.
           </div>
-          <button className="button">Projects</button>
-          <button className="button2 button">Contact Me</button>
+          <button className="home-page-btn button">Projects</button>
+          <button className="home-page-btn button2 button">Contact Me</button>
           <div className="profile">
             <img src={pic} id="profile-pic" />
+            <div id='profile-pic-outline'/>
           </div>
         </div>
       );

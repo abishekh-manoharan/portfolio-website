@@ -1,38 +1,68 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import HomePage2 from './HomePage2'
 import ProjectsPage from './ProjectsPage'
 import ContactPage from './ContactPage';
 import ResumePage from './ResumePage';
 import Footer from './Footer';
+import lightbg from '../images/bg-light.jpeg'
+import darkbg from '../images/bg-dark.jpeg'
 
 function Layout(props) {
     const [content, setContent] = useState('home')
-    let contentToShow = <HomePage2/>
+    const [darkMode, setDarkMode] = useState(false)
+    let contentToShow = <HomePage2 />
 
+    useEffect(()=>{
+        if (!darkMode) {
+            setStylesForLight()
+        }
+        else {
+            setStylesForDark()
+        }
+    },[darkMode])
+    
     const navBarItemClickHandler = (e) => {
         setContent(e)
     }
 
-    if(content==='home'){
-        contentToShow = <HomePage2 setContent={setContent}/>
+    const setStylesForDark = () => {
+        document.getElementById('App').style = "color: white;"
+        document.querySelectorAll('.button').forEach(element => {
+            element.style = "color: white; border-color: white;"
+        });
+        document.querySelectorAll('.header').forEach(element => {
+            element.style = "color: white;"
+        });
+        document.getElementById('background-overlay').style="background-color: #0000007d;" 
     }
-    else {
-        contentToShow=<ProjectsPage/>
+    
+    const setStylesForLight = () => {
+        document.getElementById('App').style = "color: black;"
+        document.querySelectorAll('.button').forEach(element => {
+            element.style = "color: black; border-color: black;"
+        });
+        document.querySelectorAll('.header').forEach(element => {
+            element.style = "color: black;"
+        });
+        document.getElementById('background-overlay').style="background-color: #rgba(255, 255, 255, 0.150);" 
     }
-    // else if (content==='projects'){
-    //     contentToShow=<ProjectsPage/>
-    // }
-    // else {
-    //     contentToShow=<ResumePage/>
-    // }
+
+
+    const darkModeHandler = () => {
+        setDarkMode(!darkMode)
+    }
+    
+    if (content === 'home') { contentToShow = <HomePage2 setStylesForDark={setStylesForDark} setStylesForLight={setStylesForLight} darkMode={darkMode} setContent={setContent} /> }
+    else { contentToShow = <ProjectsPage setStylesForDark={setStylesForDark} setStylesForLight={setStylesForLight} darkMode={darkMode}/> }
 
     return (
         <div class="layout">
             <div class="navbar">
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button> */}
-                <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Home</button>
-                <button class="navbarItem" onClick={()=>navBarItemClickHandler('projects')}>Projects</button>
+                <button class="navbarItem button" onClick={() => navBarItemClickHandler('home')}>Home</button>
+                <button class="navbarItem button" onClick={() => navBarItemClickHandler('projects')}>Projects</button>
+                <button class="navbarItem button" onClick={darkModeHandler}>Dark Mode</button>
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('resume')}>Resume</button> */}
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('contacts')}>Contact</button> */}
             </div>
@@ -44,6 +74,18 @@ function Layout(props) {
             <div class="footer">
                 {/* <Footer/> */}
             </div>
+            {/* {darkMode ? <div className="background-overlay"><img src={darkbg} className="background-img" /></div> : <div className='background-overlay'> <img src={lightbg} className="background-img" /></div>} */}
+            {darkMode ?
+                <div className="bg">
+                    <div id="background-overlay" />
+                    <img src={darkbg} className="background-img"/>
+                </div>
+                : 
+                <div className="bg">
+                    <div id="background-overlay" />
+                    <img src={lightbg} className="background-img"/>
+                </div>
+            }
         </div>
     );
 }
