@@ -648,6 +648,7 @@ a {
 .darkModeLogo {
     height: 30.74px;
     background-color: transparent;
+    top: 4px;
 }
 
 .navbarItem:nth-of-type(3) {
