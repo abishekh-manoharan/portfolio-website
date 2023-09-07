@@ -64,6 +64,7 @@ function Layout(props) {
                 {/* <button class="navbarItem" onClick={()=>navBarItemClickHandler('home')}>Logo</button> */}
                 <button class="navbarItem button" onClick={() => navBarItemClickHandler('home')}>Home</button>
                 <button class="navbarItem button" onClick={() => navBarItemClickHandler('projects')}>Projects</button>
+                <a id="navbarItem-github-btn"href="https://github.com/abishekh-manoharan/portfolio-website" target='_'><button class="navbarItem button" >GitHub</button></a>
                 <button class="navbarItem button" id="darkModeLogo" onClick={darkModeHandler}>
                     {darkMode ? 
                     <img src={lightLogo} className="darkModeLogo"/>  
