@@ -18,6 +18,10 @@ function HomePage2({ setStylesForLight, setStylesForDark, darkMode, setContent }
 
   return (
     <div className="homePage">
+      <div className="profile">
+        <img src={pic} id="profile-pic" />
+        <div id='profile-pic-outline' />
+      </div>
       <div className="greeting">Hello! I am</div>
       <div className="name">
         <strong>ABISHEKH MANOHARAN</strong>
@@ -29,11 +33,7 @@ function HomePage2({ setStylesForLight, setStylesForDark, darkMode, setContent }
         user loves, and in working with teams to meet that end.
       </div>
       <button className="home-page-btn button" onClick={handleProjectsBtnClick}>Projects</button>
-      {/* <button className="home-page-btn button2 button">Contact Me</button> */}
-      <div className="profile">
-        <img src={pic} id="profile-pic" />
-        <div id='profile-pic-outline' />
-      </div>
+
     </div>
   );
 }

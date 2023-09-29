@@ -2,7 +2,6 @@
     font-family: "Tahoma", sans-serif;
 }
 
-
 .layout {
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@
 .navbarItem:nth-of-type(1) {
     margin-left: auto;
 }
-
 
 .navbarItem {
     margin: 0px 10px;
@@ -575,12 +573,6 @@ a {
     font-size: 1.4vw;
 }
 
-.button1 {
-    /* position: relative; */
-    /* justify-self: end; */
-    /* right: 10px; */
-}
-
 .button2 {
     grid-area: button;
     position: relative;
@@ -601,6 +593,7 @@ a {
     border-radius: 70%;
     border: solid 1px;
 }
+
 /* 
 #profile-pic-outline {
     position: absolute;
@@ -632,8 +625,8 @@ a {
 }
 
 .bg {
-    position:fixed;
-    z-index: -1; 
+    position: fixed;
+    z-index: -1;
 }
 
 .button {
@@ -659,4 +652,76 @@ a {
 
 #navbarItem-github-btn {
     margin: 0px 10px;
+}
+
+
+/* mobile */
+@media (max-width: 900px) {
+    html {
+        font-size: 5vw;
+    }
+    
+    #profile-pic {
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .homePage {
+        /* position: absolute; */
+        margin: 0px;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .greeting {
+        font-size: 1rem;
+        position: relative;
+        top: 0px;
+        letter-spacing: 1px;
+        align-self: center;
+    }
+
+    .name {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0px;
+        /* font-size: 10em; */
+        align-self: center;
+    }
+
+    .occupation {
+        font-size: .75rem;
+        position: static;
+        bottom: 0px;
+        margin-bottom: 0vw;
+    }
+
+    .about {
+        font-size: 1rem;
+        position: relative;
+        bottom: 0px;
+        text-align: center;
+        line-height: 1.2rem;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .home-page-btn.button {
+        display: none;
+    }
 }
