@@ -12,30 +12,29 @@ import lightLogo from '../images/darkmode-light.svg'
 import darkLogo from '../images/darkmode-dark.svg'
 
 function Layout(props) {
-    const [content, setContent] = useState('home')
+    const [content, setContent] = useState('projects')
     const [darkMode, setDarkMode] = useState(false)
     const [navOpen, setNavOpen] = useState(false);
 
     let contentToShow = <HomePage2 />
 
     useEffect(() => {
-        if (!darkMode) {
-            setStylesForLight()
-        }
-        else {
-            setStylesForDark()
-        }
-    }, [darkMode])
+        darkMode // adapt darkmode depending on state
+            ? setStylesForDark()
+            : setStylesForLight()
 
+        navOpen // adapt nav opening/closing depending on state
+            ? (document.getElementById("nav-bar").style.width = "100%")
+            : (document.getElementById("nav-bar").style.width = "0px");
+    }, [darkMode, navOpen])
+
+    // hanlder to update main page content
     const navBarItemClickHandler = (e) => {
         setContent(e)
     }
     //handler to open/close mobile navbar
     const navClick = () => {
         setNavOpen(!navOpen);
-        navOpen
-            ? (document.getElementById("nav-bar").style.width = "100%")
-            : (document.getElementById("nav-bar").style.width = "0px");
     };
 
     const setStylesForDark = () => {
@@ -47,6 +46,7 @@ function Layout(props) {
             element.style = "color: white;"
         });
         document.getElementById('background-overlay').style = "background-color: #0000007d;"
+        document.getElementById("nav-bar").style = "background-color: black;"
     }
 
     const setStylesForLight = () => {
@@ -58,6 +58,7 @@ function Layout(props) {
             element.style = "color: black;"
         });
         document.getElementById('background-overlay').style = "background-color: #rgba(255, 255, 255, 0.150);"
+        document.getElementById("nav-bar").style = "background-color: white;"
     }
 
 
@@ -91,6 +92,7 @@ function Layout(props) {
             <button class="nav-btn" onClick={navClick}>
                 Nav
             </button>
+
             <div class="content">
                 {contentToShow}
             </div>
@@ -110,7 +112,8 @@ function Layout(props) {
                     <img src={lightbg} className="background-img" />
                 </div>
             }
-            <Nav />
+
+            <Nav setNavOpen={setNavOpen} setContent={setContent} darkMode={darkMode} darkModeHandler={darkModeHandler} />
         </div>
     );
 }
