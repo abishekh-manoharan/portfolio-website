@@ -663,7 +663,7 @@ a {
 }
 
 /* mobile */
-@media (max-width: 900px) {
+@media (max-width: 900px) and (orientation: portrait) {
     html {
         font-size: 5vw;
     }
@@ -777,14 +777,40 @@ a {
     /* PROJECTS VIEW */
     .project-container {
         display: flex;
-        flex-direction: column;        
-        width: 80vw;
+        flex-direction: column;
+        width: 90vw;
     }
-    .projects-container {
-        
+
+    .projects-container {}
+
+    .project-subheading {
+        font-size: .5rem;
     }
 
     .description {
+        font-size: .8rem;
+    }
+
+    .project-image {
+        height: 85vw;
+    }
+
+    .header {
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    .layers-logo {
+        left: 3%;
+        top: 85%;
+        height: 10vw;
+    }
+
+    .links {
+        margin-bottom: 10px;
+    }
+
+    .tags {
         font-size: .8rem;
     }
 }

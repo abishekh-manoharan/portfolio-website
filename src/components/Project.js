@@ -46,7 +46,10 @@ function Project(props) {
         document.getElementById("project-images-" + props.name).style = "display:none;"
         //re-allowing scroll external to gallery
         document.getElementsByClassName("vsc-initialized")[0].style = "overflow-y: scroll; background-color: white;"
-        document.getElementsByClassName("navbar")[0].style = "display:flex;"
+        if(window.innerWidth >= 900){
+            document.getElementsByClassName("navbar")[0].style = "display:flex;"
+        }
+        else {document.getElementsByClassName("navbar")[0].style = "display:none;"}
     }
 
     return (
