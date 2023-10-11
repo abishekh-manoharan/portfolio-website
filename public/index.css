@@ -1,6 +1,14 @@
 * {
     font-family: "Tahoma", sans-serif;
 }
+/* // HELPERS */
+.displayNone {
+    display: none;
+}
+
+.displayFlex {
+    display: flex;
+}
 
 .layout {
     display: flex;
@@ -106,7 +114,7 @@
     align-items: center;
     gap: 10px;
     overflow: scroll;
-    width: 1000px;
+    width: 100vw;
 
     padding: 20px;
     border-radius: 10px;
@@ -662,6 +670,9 @@ a {
     display: none;
 }
 
+
+
+
 /* mobile */
 @media (max-width: 900px) and (orientation: portrait) {
     html {
@@ -814,3 +825,15 @@ a {
         font-size: .8rem;
     }
 }
+
+
+/* @media (min-width: 900px) and (max-width: 2000px){
+    .navbar {
+        display: flex;
+    }
+    .body {
+        display: none;
+    }
+} */
+
+

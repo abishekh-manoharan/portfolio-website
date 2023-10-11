@@ -38,7 +38,10 @@ function Project(props) {
         props.darkMode ? document.getElementById("project-images-" + props.name).style = "display:flex; background-color: black;" : document.getElementById("project-images-" + props.name).style = "display:flex; background-color: whitesmoke;"
         //preventing scroll external to gallery
         document.getElementsByClassName("vsc-initialized")[0].style = "overflow-y: hidden; background-color: rgb(0, 0, 0, 0.1);"
-        document.getElementsByClassName("navbar")[0].style = "display:none;"
+        // hiding navbar
+            // document.getElementsByClassName("navbar")[0].style = "display:none;"
+        document.getElementsByClassName("navbar")[0].classList.add('displayNone')
+        
     }
 
     const closeProjectImagesHandler = () => {
@@ -47,9 +50,15 @@ function Project(props) {
         //re-allowing scroll external to gallery
         document.getElementsByClassName("vsc-initialized")[0].style = "overflow-y: scroll; background-color: white;"
         if(window.innerWidth >= 900){
-            document.getElementsByClassName("navbar")[0].style = "display:flex;"
+            
+            document.getElementsByClassName("navbar")[0].classList.add('displayFlex')
         }
-        else {document.getElementsByClassName("navbar")[0].style = "display:none;"}
+        else { 
+            if(document.getElementsByClassName("navbar")[0].classList.contains('displayFlex')){
+                document.getElementsByClassName("navbar")[0].classList.remove('displayFlex')
+            }
+            document.getElementsByClassName("navbar")[0].classList.add('displayNone') 
+        }
     }
 
     return (
