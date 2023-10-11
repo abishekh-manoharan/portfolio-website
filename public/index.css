@@ -221,6 +221,8 @@
         'filter'
     ;
     justify-content: end;
+
+    z-index: 1;
     /* max-width: 980px; */
 }
 
