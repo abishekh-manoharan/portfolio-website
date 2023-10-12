@@ -769,7 +769,7 @@ a {
 
         transition: width 0.5s;
 
-        z-index: 0;
+        z-index: 1;
     }
 
     .nav-option {
@@ -780,11 +780,18 @@ a {
     .nav-btn {
         display: block;
 
+        width: 8vw;
         position: fixed;
         top: 10px;
         right: 10px;
 
         z-index: 2;
+
+        transition: transform .5s;
+    }
+
+    .nav-btn-translate {
+        transform: rotate(90deg);
     }
 
 
@@ -826,6 +833,10 @@ a {
 
     .tags {
         font-size: .8rem;
+    }
+    
+    .filterAndSort {
+        margin-top: 8vw;
     }
 }
 

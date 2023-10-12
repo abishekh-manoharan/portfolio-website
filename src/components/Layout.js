@@ -10,6 +10,7 @@ import lightbg from '../images/bg-light.jpeg'
 import darkbg from '../images/bg-dark.jpeg'
 import lightLogo from '../images/darkmode-light.svg'
 import darkLogo from '../images/darkmode-dark.svg'
+import menu from '../images/menu.svg'
 
 function Layout(props) {
     const [content, setContent] = useState('projects')
@@ -26,6 +27,10 @@ function Layout(props) {
         navOpen // adapt nav opening/closing depending on state
             ? (document.getElementById("nav-bar").style.width = "100%")
             : (document.getElementById("nav-bar").style.width = "0px");
+
+        navOpen
+            ? document.querySelector('.nav-btn').classList.add('nav-btn-translate')
+            : document.querySelector('.nav-btn').classList.remove('nav-btn-translate')
     }, [darkMode, navOpen])
 
     // hanlder to update main page content
@@ -89,9 +94,7 @@ function Layout(props) {
             </div>
 
             {/* // mobile navbar */}
-            <button class="nav-btn" onClick={navClick}>
-                Nav
-            </button>
+            <img class="nav-btn" src={menu} onClick={navClick} />
 
             <div class="content">
                 {contentToShow}
