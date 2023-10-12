@@ -701,7 +701,6 @@ a {
 
     .homePage {
         /* position: absolute; */
-        margin: 0px;
         top: 20px;
         display: flex;
         flex-direction: column;
@@ -779,7 +778,7 @@ a {
         margin-top: 10vh;
     }
 
-    .nav-option, .nav-option-a {
+    .nav-option {
         height: 17vh;
         width: 95vw;
         margin: auto;
@@ -788,6 +787,16 @@ a {
         border: none;
         font-size: 1rem;
     }
+
+    .nav-option-a {
+        height: 17vh;
+        width: 95vw;
+        margin: auto;
+        border-radius: 10px;
+        border: none;
+        font-size: 1rem;
+    }
+
     .nav-btn {
         display: block;
 
@@ -855,14 +864,14 @@ a {
     }
 }
 
-
-/* @media (min-width: 900px) and (max-width: 2000px){
-    .navbar {
-        display: flex;
+@media (orientation: portrait) {
+    .background-img {
+        height: 100vh;
     }
-    .body {
-        display: none;
+}
+
+@media (orientation: landscape) {
+    .background-img {
+        width: 100vw;
     }
-} */
-
-
+}
