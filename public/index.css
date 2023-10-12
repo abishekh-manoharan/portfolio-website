@@ -765,18 +765,29 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        /* align-items: center; */
         gap: 20px;
+        padding-bottom: 20px;
 
         transition: width 0.5s;
 
         z-index: 1;
     }
 
-    .nav-option {
-        height: 20vh;
-        background-color: rgb(116, 116, 116);
+    
+    .nav-option:nth-child(1) {
+        margin-top: 10vh;
     }
 
+    .nav-option {
+        height: 17vh;
+        width: 95vw;
+        margin: auto;
+        background-color: rgb(183 183 183 / 72%);
+        border-radius: 10px;
+        border: none;
+        font-size: 1rem;
+    }
     .nav-btn {
         display: block;
 

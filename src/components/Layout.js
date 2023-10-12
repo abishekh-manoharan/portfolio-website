@@ -10,7 +10,8 @@ import lightbg from '../images/bg-light.jpeg'
 import darkbg from '../images/bg-dark.jpeg'
 import lightLogo from '../images/darkmode-light.svg'
 import darkLogo from '../images/darkmode-dark.svg'
-import menu from '../images/menu.svg'
+import menuDark from '../images/menu-dark.svg'
+import menuLight from '../images/menu-light.svg'
 
 function Layout(props) {
     const [content, setContent] = useState('projects')
@@ -28,7 +29,7 @@ function Layout(props) {
             ? (document.getElementById("nav-bar").style.width = "100%")
             : (document.getElementById("nav-bar").style.width = "0px");
 
-        navOpen
+        navOpen // rotating menu icon
             ? document.querySelector('.nav-btn').classList.add('nav-btn-translate')
             : document.querySelector('.nav-btn').classList.remove('nav-btn-translate')
     }, [darkMode, navOpen])
@@ -52,6 +53,7 @@ function Layout(props) {
         });
         document.getElementById('background-overlay').style = "background-color: #0000007d;"
         document.getElementById("nav-bar").style = "background-color: black;"
+
     }
 
     const setStylesForLight = () => {
@@ -94,7 +96,10 @@ function Layout(props) {
             </div>
 
             {/* // mobile navbar */}
-            <img class="nav-btn" src={menu} onClick={navClick} />
+            {darkMode
+                ? <img class="nav-btn" src={menuLight} onClick={navClick} />
+                : <img class="nav-btn" src={menuDark} onClick={navClick} />                 
+            }
 
             <div class="content">
                 {contentToShow}
