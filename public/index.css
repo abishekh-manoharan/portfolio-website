@@ -779,7 +779,7 @@ a {
         margin-top: 10vh;
     }
 
-    .nav-option {
+    .nav-option, .nav-option-a {
         height: 17vh;
         width: 95vw;
         margin: auto;
