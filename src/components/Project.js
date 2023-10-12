@@ -82,7 +82,7 @@ function Project(props) {
                             <div class="project-subheading">
                                 Code
                             </div>
-                            <a href={props.githubLink} target='_'>Link</a>
+                            <a class="link-txt" href={props.githubLink} target='_'>Link</a>
                         </div>
 
                         {props.demo ?
@@ -90,7 +90,7 @@ function Project(props) {
                                 <div class="project-subheading">
                                     Demo
                                 </div>
-                                <a href={props.demoLink} target='_'>Link</a>
+                                <a class="link-txt" href={props.demoLink} target='_'>Link</a>
                             </div> : null
                         }
 
@@ -99,7 +99,7 @@ function Project(props) {
                                 <div class="project-subheading">
                                     Site Link
                                 </div>
-                                <a href={props.siteLink} target='_'>Link</a>
+                                <a class="link-txt" href={props.siteLink} target='_'>Link</a>
                             </div>
                             : <></>
                         }

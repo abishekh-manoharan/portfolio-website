@@ -841,6 +841,10 @@ a {
     .links {
         margin-bottom: 10px;
     }
+    
+    .link-txt {
+        font-size: .8rem;
+    }
 
     .tags {
         font-size: .8rem;
