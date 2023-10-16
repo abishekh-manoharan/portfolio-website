@@ -14,7 +14,7 @@ import menuDark from '../images/menu-dark.svg'
 import menuLight from '../images/menu-light.svg'
 
 function Layout(props) {
-    const [content, setContent] = useState('projects')
+    const [content, setContent] = useState('home')
     const [darkMode, setDarkMode] = useState(false)
     const [navOpen, setNavOpen] = useState(false);
 
