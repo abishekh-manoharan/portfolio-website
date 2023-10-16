@@ -25,13 +25,17 @@ function Layout(props) {
             ? setStylesForDark()
             : setStylesForLight()
 
-        navOpen // adapt nav opening/closing depending on state
-            ? (document.getElementById("nav-bar").style.width = "100%")
-            : (document.getElementById("nav-bar").style.width = "0px");
-
-        navOpen // rotating menu icon
-            ? document.querySelector('.nav-btn').classList.add('nav-btn-translate')
-            : document.querySelector('.nav-btn').classList.remove('nav-btn-translate')
+        if (navOpen) {
+            document.getElementById("nav-bar").style.width = "100%" // open navbar by increasing to full width
+            document.querySelector('.nav-btn').classList.add('nav-btn-translate') // nav button rotation class adding        
+            document.getElementsByTagName('body')[0].classList.add('overflow-hidden')// prevent scrolling on projects page
+            
+        } else {
+            document.getElementById("nav-bar").style.width = "0px"; // close navbar by decreasing width to 0
+            document.querySelector('.nav-btn').classList.remove('nav-btn-translate') // nav button rotation class removing
+            document.getElementsByTagName('body')[0].classList.remove('overflow-hidden') // allowing scrolling on projects page           
+        }
+    
     }, [darkMode, navOpen])
 
     // hanlder to update main page content
@@ -98,7 +102,7 @@ function Layout(props) {
             {/* // mobile navbar */}
             {darkMode
                 ? <img class="nav-btn" src={menuLight} onClick={navClick} />
-                : <img class="nav-btn" src={menuDark} onClick={navClick} />                 
+                : <img class="nav-btn" src={menuDark} onClick={navClick} />
             }
 
             <div class="content">
