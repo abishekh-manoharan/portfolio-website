@@ -15,7 +15,7 @@ import menuLight from '../images/menu-light.svg'
 
 function Layout(props) {
     const [content, setContent] = useState('home')
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(true)
     const [navOpen, setNavOpen] = useState(false);
 
     let contentToShow = <HomePage2 />
