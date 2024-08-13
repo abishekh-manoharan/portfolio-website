@@ -83,6 +83,18 @@ function ProjectsPage({setStylesForLight, setStylesForDark, darkMode}) {
             "demoLink": "https://youtu.be/onljbCRj9jc",
             "images": ["https://i.imgur.com/nPaLeTB.png","https://i.imgur.com/VE9NyST.png"],
             "tags": ["MVC", "CSS", "Demo", "HTML", "Java", "SQL", "Individual Project", "Academic Project", "Website"]
+        },
+        {
+            "id": 7,
+            "name": "CheckMyPlant Website",
+            "description": "In this academic project, I worked within a team of 8 to develop a website that allowed end users to determine if a cauliflower is diseased using an AI model which we trained ourselves. Users can upload an image of a cauliflower and receive their results on a separate page. Jupyter Notebook and Python was used to create, train, and export the AI model. Flask was used for web-page routing and as an API to make predictions. For the front-end, vanilla JavaScript, HTML, and CSS was used.",
+            "deployed": false,
+            "demo": true,
+            "siteLink": "google.ca",
+            "githubLink": "https://github.com/abi-manoharan97/CheckMyPlant",
+            "demoLink": "https://youtu.be/pz4aPWHdSLQ",
+            "images": ["https://placekitten.com/150/150","https://placekitten.com/150/150","https://placekitten.com/150/150"],
+            "tags": ["AI", "Demo", "Flask", "HTML", "JavaScript", "Python", "CSS", "Group Project", "Academic Project", "Website"]
         }
     ])
 
